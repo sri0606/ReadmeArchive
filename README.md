@@ -23,7 +23,7 @@ This repository is solely for displaying README.md files for all my private repo
 
 - [BrainWaiveApp](README/brainwaive.md) - A brief description of BrainWaiveApp.
 - [EMAIL_List](README/email_list.md) - Learn more about EMAIL_List.
-
+- [Portfolio](README/portfolio.md) - My portfolio website project.
 ## Contact
 
 If you have inquiries or would like to collaborate on any of these projects, you can reach out to me through [my GitHub profile](https://github.com/sri0606) or via my [srirams0606@gmail.com](srirams0606@gmail.com).
