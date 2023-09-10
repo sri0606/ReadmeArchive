@@ -1,0 +1,31 @@
+name: Sync READMEs
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch name as needed
+
+jobs:
+  sync-readmes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Copy READMEs
+        run: |
+          git clone https://github.com/sri0606/BrainWaiveApp.git temp/brainwaive
+          cp temp/brainwaive/README.md README/brainwaive.md
+          git clone https://github.com/sri0606/EMAIL_List.git temp/email_list
+          cp temp/email_list/README.md README/email_list.md
+          # Repeat for other private repositories
+        
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Sync READMEs"
+          git push
+
